@@ -251,8 +251,35 @@ app.controller('appController', function($scope, $timeout, $interval) {
     }
 
     function runTerminalCommands() {
-        $interval(function() {
-            $scope.terminalCommand = $scope.terminalCommand + 1;
-        }, 3500)
+        var delay = 3500;
+        
+        var commandInterval = $interval(function() {
+            var currentDelay = $scope.terminalCommandList[$scope.terminalCommand].delay;
+            var previousDelay;
+            var outputDelay = $scope.terminalCommandList[$scope.terminalCommand].outputList.length * 300;
+
+            if ($scope.terminalCommandList[$scope.terminalCommand - 1] == undefined) {
+                previousDelay = 0;
+            }
+            else {
+                previousDelay = $scope.terminalCommandList[$scope.terminalCommand - 1].delay;
+
+            }
+            // previousDelay = previousDelay == undefined ? 0 : previousDelay;
+
+            console.log('delaying terminal current:', currentDelay);
+            console.log('delaying terminal previous:', previousDelay);
+            console.log('delaying terminal output:', outputDelay);
+
+            delay = currentDelay - previousDelay + outputDelay;
+
+            console.log('****** delaying next command:', delay);
+            $scope.terminalCommand++;
+
+            // TODO: switch to dynamic end
+            if ($scope.terminalCommand == 3){
+                $interval.cancel(commandInterval); // kill the interval
+            }
+        }, delay)
     }
 });
