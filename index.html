@@ -25,10 +25,24 @@
 
         <div class="contentContainer">
             <div layout="row" layout-align="center center" layout-xs="column">
-                <div flex-xs="90" flex-gt-xs="60" style="border:solid 1px grey; width: 80%;max-width: 350px;min-height: 198px;">bio</div>
-                <div flex-xs="90" flex-gt-xs="25" style="border:solid 1px grey;" class="profileContainer" layout="row">
+                <div flex-xs="90" flex-gt-xs="60" 
+                    class="bioContainer" 
+                    layout-align="center center">
+                    
+                    <md-whiteframe class="md-whiteframe-2dp bioFrame">
+                        <h4 style="margin:0 0 8px 0">{{content.bio.title}}</h4>
+                        <span>{{content.bio.body}}</span>
+                    </md-whiteframe>
+                </div>
+                <div flex-xs="90" flex-gt-xs="25" class="profileContainer" layout="row">
                     <img class="profilePic" src="img/profilePic.png" />
-                    <div style="border:solid 1px grey; width: 80%;max-width: 70px;min-height: 194px;">links</div>
+                    <div style=" width: 80%;max-width: 70px;min-height: 194px;">
+
+                        <md-button class="md-fab thirdPartyButton" style="margin-top:0" aria-label="Comment"></md-button>
+                        <md-button class="md-fab thirdPartyButton" aria-label="Comment"></md-button>
+                        <md-button class="md-fab thirdPartyButton" aria-label="Comment"></md-button>
+
+                    </div>
                 </div>
             </div>
             <div layout="row" layout-align="center center" layout-xs="column">

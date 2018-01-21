@@ -1,5 +1,5 @@
 app.controller('terminalController', function($scope, $timeout, $interval, contentService) {
-	$scope.demoCommandsComplete = false;
+    $scope.demoCommandsComplete = false;
     $scope.terminalCommandList = contentService.getTerminalContent();
     $scope.terminalCommand = 0;
     runTerminalCommands(3500);
@@ -32,8 +32,7 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
         $timeout(function() {
             var outputList = $scope.terminalCommandList[parentIndex].outputList;
             outputList[index].show = true;
-
-            // we done
+            // check if were done
             if ($scope.terminalCommandList.length - 1 == parentIndex && outputList.length - 1 == index) {
                 $timeout(function() {
                     console.log('were done with commands');
@@ -44,35 +43,11 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
     }
 
     function runTerminalCommands(delay) {
-        var commandTimeout = $timeout(function() {
-
-            var currentDelay = $scope.terminalCommandList[$scope.terminalCommand].delay;
-            var previousDelay, outputDelay;
-
-            if ($scope.terminalCommandList[$scope.terminalCommand - 1] == undefined) {
-                previousDelay = outputDelay = 0;
-            }
-            else {
-                previousDelay = $scope.terminalCommandList[$scope.terminalCommand - 1].delay;
-                outputDelay = ($scope.terminalCommandList[$scope.terminalCommand - 1].outputList.length + 2) * 300;
-
-            }
-            console.log('delaying terminal current:', currentDelay);
-            console.log('delaying terminal previous:', previousDelay);
-            console.log('delaying terminal output:', outputDelay);
-
-            delay = currentDelay - previousDelay + outputDelay;
-            console.log('****** delaying next command:', delay);
-            
+        var run = $interval(function() {
             $scope.terminalCommand++;
- 
             if ($scope.terminalCommand == $scope.terminalCommandList.length) {
-                $timeout.cancel(commandTimeout); // kill the timeout
+                $interval.cancel(run);
             }
-            else {
-                runTerminalCommands(delay);
-            }
-        }, delay);
-
+        }, 3500)
     }
 });

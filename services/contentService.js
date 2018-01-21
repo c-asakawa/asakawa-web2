@@ -26,7 +26,21 @@ app.service('contentService', function() {
             ],
         }
     ]
+    var content = {
+        bio: {
+            title: 'Why I Do What I Do',
+            body: 'Something that will always interest me is making things.        \
+                   Which why I love what I do, there is nothing more rewarding then developing    \
+                   software to solve complex problems. Writing code makes me feel empowered, to   \
+                   create something useful out of nothing. The potential and innovations          \
+                   of software never ceases to amaze me, and I look forward to learning more in   \
+                   my future in programming.'
+        }
+    }
     this.getTerminalContent = function() {
         return terminalContent;
+    }
+    this.getContent = function() {
+        return content;
     }
 });
