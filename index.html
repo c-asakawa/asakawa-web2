@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="bower_components/angular-material/angular-animate.min.css">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body ng-app="asakawaApp" ng-controller="appController">
@@ -22,6 +22,36 @@
         <![endif]-->
 
         <div ng-include="'templates/terminal.html'"></div>
+
+        <div class="contentContainer">
+            <div layout="row" layout-align="center center" layout-xs="column">
+                <div flex-xs="90" flex-gt-xs="60" style="border:solid 1px grey; width: 80%;max-width: 350px;min-height: 198px;">bio</div>
+                <div flex-xs="90" flex-gt-xs="25" style="border:solid 1px grey;" class="profileContainer" layout="row">
+                    <img class="profilePic" src="img/profilePic.png" />
+                    <div style="border:solid 1px grey; width: 80%;max-width: 70px;min-height: 194px;">links</div>
+                </div>
+            </div>
+            <div layout="row" layout-align="center center" layout-xs="column">
+                <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
+                    <span flex-xs="5" flex-gt-xs=""></span>
+
+                    <div class="tileContainer"></div>
+                    <span flex-xs="10" flex-gt-xs="16" flex-sm="20" flex-gt-sm="20"></span>
+                    <div class="tileContainer"></div>
+                    <span flex-xs="5" flex-gt-xs="10" flex-sm="10" flex-gt-sm="10"></span>
+
+                </div>
+                <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
+
+                    <span flex-xs="5" flex-gt-xs="10"; flex-sm="10" flex-gt-sm="10"></span>
+                    <div class="tileContainer"></div>
+                    <span flex-xs="10" flex-gt-xs="16"; flex-sm="20" flex-gt-sm="20"></span>
+                    <div class="tileContainer"></div>
+
+                    <span flex-xs="5" flex-gt-xs=""></span>
+                </div>
+            </div>
+        </div>
 
 
         <!-- JS Resources -->
