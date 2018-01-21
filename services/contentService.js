@@ -8,11 +8,10 @@ app.service('contentService', function() {
             outputList: [ 
                 { line: 'Hi, my name is Chris Asakawa.', show: false }, 
                 { line: 'I\'m a software developer.', show: false },
-                { line: '', show: false },
             ],
         },
         {
-            input: 'cat welcome',
+            input: 'cat welcome.txt',
             delay: 5000,
             show: false,
             outputList: [ 
