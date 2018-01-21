@@ -1,0 +1,24 @@
+<ul class="terminalContainer" ng-controller="terminalController">
+    <li class="terminalHeader"></li>
+    <li ng-repeat="command in terminalCommandList">
+        <div ng-show="terminalCommand == $index && command.show">
+            <input-line></input-line>
+            <input-type text="command.input" delay="command.delay"></input-type>
+            <!-- <span ng-if="terminalCommand == $index && command.show" ng-init="nextCommand()"></span> -->
+        </div>
+        <div ng-if="terminalCommand > $index">
+            <input-line></input-line>
+            <span style="color:#FFF">{{command.input}}<br/></span>
+            <span ng-repeat="output in command.outputList" 
+                ng-init="delayOutput($parent.$index, $index)"
+                ng-show="output.show">
+                &ensp;<span class="preserveWhiteSpace">{{output.line}}</span><br/>
+                <span ng-if="$last" ng-init="delayInput()"></span>
+            </span>
+        </div>
+    </li>
+    <li ng-if="demoCommandsComplete">
+        <input-line></input-line>
+        <input-type text="''" delay="1"></input-type>
+    </li>
+</ul>

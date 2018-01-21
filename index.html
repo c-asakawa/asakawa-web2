@@ -18,28 +18,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <ul class="terminalContainer">
-            <li ng-repeat="command in terminalCommandList">
-                <div ng-show="terminalCommand == $index && command.show">
-                    <input-line></input-line>
-                    <input-type text="command.input" delay="command.delay"></input-type>
-                    <!-- <span ng-if="terminalCommand == $index && command.show" ng-init="nextCommand()"></span> -->
-                </div>
-                <div ng-if="terminalCommand > $index">
-                    <input-line></input-line>
-                    <span style="color:black">{{command.input}}<br/></span>
-                    <span ng-repeat="output in command.outputList" 
-                        ng-init="delayOutput($parent.$index, $index)"
-                        ng-show="output.show">
-                        &ensp;{{output.line}}<br/>
-                        <span ng-if="$last" ng-init="delayInput()"></span>
-                    </span>
-                </div>
-            </li>
-        </ul>
-
-
+        <div ng-include="'templates/terminal.html'"></div>
 
         <!-- JS Resources -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -52,8 +31,11 @@
         <script type="application/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
 
         <!-- My JS Resources -->
-        <script type="application/javascript" src="js/typer.js"></script>
+        <!-- <script type="application/javascript" src="js/typer.js"></script> -->
         <script type="application/javascript" src="app.js"></script>
+        <script type="application/javascript" src="services/contentService.js"></script>
+        <script type="application/javascript" src="directives/typerDirective.js"></script>
+        <script type="application/javascript" src="controllers/terminalController.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
