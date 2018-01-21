@@ -2,13 +2,36 @@ ul {
     padding: 0;
     list-style-type: none;
 }
+md-fab-toolbar .md-fab-toolbar-wrapper {
+    height: 55px !important;
+}
+md-fab-toolbar.md-left md-fab-trigger {
+    right: 5px !important;
+}
+md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
+    background-color: #201a5b !important;
+}
+/*.md-button.md-fab {
+    background-color: #757575 !important;
+}*/
 .darkgrey {
     color: #757575;
 }
+.darkHeader {
+    background-color: #201a5b !important;
+    color: #fff;
+}
+
+.bgImage {
+    height: 550px;
+    width: 100%;
+}
 
 .contentContainer {
-    margin: 50px 0;
-    padding: 20px 0;
+    padding: 0 0 50px 0;
+    background-color: #fafafa;
+    position: relative;
+    top: -50px;
 }
 .bioContainer {
     width: 80%;
@@ -22,10 +45,11 @@ ul {
     height: 190px;
     padding: 10px;
     font-size: 13px;
+    overflow: auto;
 }
 .profileContainer {
     width: 80%;
-    max-width: 265px !important;
+    max-width: 250px !important;
     max-height: 200px !important;
 }
 .profilePic {
@@ -42,12 +66,16 @@ ul {
     width: 90%;
     height: 170px
 }
-.thirdPartyButton {
-    max-height: 54px;
-    max-width: 54px;
+.socialButton {
+    max-height: 38px;
+    max-width: 38px;
     background-color: lightgrey !important;
 }
-
+.socialIcon {
+    font-size: 18px;
+    margin-top: 3px;
+    display: block;
+}
 
 .tileContainer {
     border:solid 1px grey;
@@ -57,7 +85,8 @@ ul {
 }
 
 .terminalContainer {
-    position: relative;
+    position: absolute;
+    top: 50px;
     font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
     font-size: 13px;
     font-style: normal;

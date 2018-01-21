@@ -48,7 +48,7 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
             if ($scope.terminalCommand == $scope.terminalCommandList.length) {
                 $interval.cancel(run);
             }
-        }, delay)
+        }, delay);
          // $timeout(function() {
         //  $scope.terminalCommand++;
         //  $timeout(function() {

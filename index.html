@@ -21,10 +21,39 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
+        <img src="img/galaxy.png" class="bgImage" alt="" du-parallax y="background" />
         <div ng-include="'templates/terminal.html'"></div>
 
         <div class="contentContainer">
-            <div layout="row" layout-align="center center" layout-xs="column">
+
+<md-fab-toolbar md-open="false" count="0" md-direction="left">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-mini darkHeader">
+        <md-icon style="display: unset">
+            <!-- Put what ever youwant here -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </md-icon>
+      </md-button>
+    </md-fab-trigger>
+
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button class="" aria-label="email">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            &nbsp;Email
+        </md-button>
+        <md-button class="" aria-label="phone">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            &nbsp;Phone
+        </md-button>
+        <md-button class="" aria-label="resume">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            &nbsp;Resume
+        </md-button>
+      </md-fab-actions>
+    </md-toolbar>
+</md-fab-toolbar>
+            <div layout="row" layout-align="center center" layout-xs="column" style="margin-top:20px;">
                 <div flex-xs="90" flex-gt-xs="60" 
                     class="bioContainer" 
                     layout-align="center center">
@@ -36,12 +65,20 @@
                 </div>
                 <div flex-xs="90" flex-gt-xs="25" class="profileContainer" layout="row">
                     <img class="profilePic" src="img/profilePic.png" />
-                    <div style=" width: 80%;max-width: 70px;min-height: 194px;">
+                    <div style=" width: 80%;max-width: 55px;min-height: 194px;">
 
-                        <md-button class="md-fab thirdPartyButton" style="margin-top:0" aria-label="Comment"></md-button>
-                        <md-button class="md-fab thirdPartyButton" aria-label="Comment"></md-button>
-                        <md-button class="md-fab thirdPartyButton" aria-label="Comment"></md-button>
-
+                        <md-button class="md-fab socialButton" style="margin-top:0" aria-label="Comment">
+                            <i class="fa fa-linkedin socialIcon" aria-hidden="true"></i>
+                        </md-button>
+                        <md-button class="md-fab socialButton" aria-label="Comment">
+                            <i class="fa fa-github-alt socialIcon" aria-hidden="true"></i>
+                        </md-button>
+                        <md-button class="md-fab socialButton" aria-label="Comment">
+                            <i class="fa fa-facebook socialIcon" aria-hidden="true"></i>
+                        </md-button>
+                        <md-button class="md-fab socialButton" aria-label="Comment">
+                            <i class="fa fa-instagram socialIcon" aria-hidden="true"></i>
+                        </md-button>
                     </div>
                 </div>
             </div>
@@ -52,12 +89,12 @@
                     <div class="tileContainer"></div>
                     <span flex-xs="10" flex-gt-xs="16" flex-sm="20" flex-gt-sm="20"></span>
                     <div class="tileContainer"></div>
-                    <span flex-xs="5" flex-gt-xs="10" flex-sm="10" flex-gt-sm="10"></span>
+                    <span flex-xs="5" flex-gt-xs="8" flex-sm="10" flex-gt-sm="10"></span>
 
                 </div>
                 <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
 
-                    <span flex-xs="5" flex-gt-xs="10"; flex-sm="10" flex-gt-sm="10"></span>
+                    <span flex-xs="5" flex-gt-xs="8"; flex-sm="10" flex-gt-sm="10"></span>
                     <div class="tileContainer"></div>
                     <span flex-xs="10" flex-gt-xs="16"; flex-sm="20" flex-gt-sm="20"></span>
                     <div class="tileContainer"></div>
@@ -78,6 +115,9 @@
         <script type="application/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+        <script type="application/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+        <!-- <script type="application/javascript" src="bower_components/angular-parallax/scripts/angular-parallax.js"></script> -->
+        <script type="application/javascript" src="js/angular-parallax.js"></script>
 
         <!-- My JS Resources -->
         <!-- <script type="application/javascript" src="js/typer.js"></script> -->
