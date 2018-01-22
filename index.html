@@ -72,26 +72,22 @@
                     </md-whiteframe>
                     <div style=" width: 80%;max-width: 55px;min-height: 194px;">
 
-                        <md-button class="md-fab socialButton" style="margin-top:0" aria-label="Comment">
-                            <i class="fa fa-linkedin socialIcon" aria-hidden="true"></i>
+                        <md-button class="md-fab socialButton darkHeader"
+                            ng-repeat="item in socialMedia" 
+                            ng-style="$first ? {'margin-top':'0'} : {'margin-top':'5px'}" 
+                            aria-label="{{item.label}}"
+                            ng-click="clickSocialMedia(item.url)">
+                            <i class="{{item.iconClass}} socialIcon" aria-hidden="true"></i>
                         </md-button>
-                        <md-button class="md-fab socialButton" aria-label="Comment">
-                            <i class="fa fa-github-alt socialIcon" aria-hidden="true"></i>
-                        </md-button>
-                        <md-button class="md-fab socialButton" aria-label="Comment">
-                            <i class="fa fa-facebook socialIcon" aria-hidden="true"></i>
-                        </md-button>
-                        <md-button class="md-fab socialButton" aria-label="Comment">
-                            <i class="fa fa-instagram socialIcon" aria-hidden="true"></i>
-                        </md-button>
+
                     </div>
                 </div>
             </div>
             <div layout="row" layout-align="center center" layout-xs="column" style="margin-top:20px">
                 <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
                     <span flex-xs="5" flex-gt-xs=""></span>
-
                     <div class="tileContainer">
+                        <span class="tileLabel">Academia</span>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
@@ -107,6 +103,7 @@
                     </div>
                     <div flex-xs="10" flex-gt-xs="16" flex-sm="20" flex-gt-sm="20"></div>
                     <div class="tileContainer">
+                        <span class="tileLabel">Projects</span>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
@@ -127,6 +124,7 @@
 
                     <div flex-xs="5" flex-gt-xs="8"; flex-sm="10" flex-gt-sm="10"></div>
                     <div class="tileContainer">
+                        <span class="tileLabel">Open Source</span>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
@@ -142,6 +140,7 @@
                     </div>
                     <div flex-xs="10" flex-gt-xs="16"; flex-sm="20" flex-gt-sm="20"></div>
                     <div class="tileContainer">
+                        <span class="tileLabel">Freelance</span>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
@@ -159,7 +158,7 @@
                     <span flex-xs="5" flex-gt-xs=""></span>
                 </div>
             </div>
-            <md-toolbar class="darkHeader">
+            <md-toolbar class="footerContainer darkHeader">
                     footer
             </md-toolbar>
         </div>

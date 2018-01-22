@@ -37,10 +37,37 @@ app.service('contentService', function() {
                    my future in programming.'
         }
     }
+
+    var socialMedia = {
+        linkedin: {
+            label: 'LinkedIn',
+            iconClass: 'fa fa-linkedin',
+            url: 'https://www.linkedin.com/in/asakawa-11007937/'
+        },
+        github: {
+            label: 'GitHub',
+            iconClass: 'fa fa-github-alt',
+            url: 'https://github.com/c-asakawa'
+        },
+        facebook: {
+            label: 'Facebook',
+            iconClass: 'fa fa-facebook',
+            url: 'https://www.facebook.com/chris.asa.1'
+        },
+        instagram: {
+            label: 'Instagram',
+            iconClass: 'fa fa-instagram',
+            url: 'https://www.instagram.com/chris.asakawa/?hl=en'
+        }
+
+    }
     this.getTerminalContent = function() {
         return terminalContent;
     }
     this.getContent = function() {
         return content;
+    }
+    this.getSocialMedia = function() {
+        return socialMedia;
     }
 });

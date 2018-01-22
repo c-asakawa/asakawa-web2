@@ -89,7 +89,6 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 .socialButton {
     max-height: 38px;
     max-width: 38px;
-    background-color: lightgrey !important;
 }
 .socialIcon {
     font-size: 18px;
@@ -99,9 +98,18 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 
 .tileContainer {
     /*border:solid 1px grey;*/
-    height:140px;
+    height:165px;
     width:140px;
     min-width: 140px;
+}
+.tileLabel {
+    bottom: 5px;
+    position: relative;
+}
+.footerContainer {
+    min-height: 30px;
+    height: 30px;
+    margin-top: 30px;
 }
 
 .terminalContainer {
