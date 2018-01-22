@@ -13,7 +13,6 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
         if($scope.debug) { console.log('delayOutput():', $scope.terminalCommand); }
         // no action for the zeroth command
         if ($scope.terminalCommand == 0 || $scope.terminalCommand > $scope.terminalCommandList.length - 1) {
-            console.log('NOPE');
             return;
         }
         if($scope.debug) { console.log('delaying input on', $scope.terminalCommandList[$scope.terminalCommand - 1]) };
@@ -21,10 +20,10 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
         // var delay = $scope.terminalCommandList[index-1].delay + ((outputLength + 5) * 300);
         var delay = outputLength * 300;
         
-        console.log('delaying input:', delay);
+        if($scope.debug) { console.log('delaying input:', delay); }
         $timeout(function() {
             $scope.terminalCommandList[$scope.terminalCommand].show = true;
-            console.log('setting input', $scope.terminalCommand-1, 'true');
+            if($scope.debug) { console.log('setting input', $scope.terminalCommand-1, 'true'); }
         }, delay);
     }
 
@@ -35,7 +34,7 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
             // check if were done
             if ($scope.terminalCommandList.length - 1 == parentIndex && outputList.length - 1 == index) {
                 $timeout(function() {
-                    console.log('were done with commands');
+                    if($scope.debug) { console.log('were done with commands'); }
                     $scope.demoCommandsComplete = true;
                 }, 300);
             }
