@@ -37,7 +37,6 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 }
 
 .contentContainer {
-    padding: 0 0 50px 0;
     background-color: #fafafa;
     position: relative;
     top: -50px;
@@ -99,7 +98,7 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 }
 
 .tileContainer {
-    border:solid 1px grey;
+    /*border:solid 1px grey;*/
     height:140px;
     width:140px;
     min-width: 140px;
