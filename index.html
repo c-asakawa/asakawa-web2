@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
         <link rel="stylesheet" href="css/tileFlip.css">
+        <link rel="stylesheet" href="css/dialog.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body ng-app="asakawaApp" ng-controller="appController">
@@ -39,15 +40,21 @@
 
                 <md-toolbar>
                     <md-fab-actions class="md-toolbar-tools">
-                        <md-button class="navButton" aria-label="email">
+                        <md-button class="navButton" 
+                            aria-label="email"
+                            ng-click="email($event)">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             &nbsp;Email
                         </md-button>
-                        <md-button class="navButton" aria-label="phone">
+                        <md-button class="navButton" 
+                            aria-label="phone"
+                            ng-click="phone($event)">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             &nbsp;Phone
                         </md-button>
-                        <md-button class="navButton" aria-label="resume">
+                        <md-button class="navButton" 
+                            aria-label="resume"
+                            ng-click="resume($event)">
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                             &nbsp;Resume
                         </md-button>
@@ -88,7 +95,9 @@
                     <span flex-xs="5" flex-gt-xs=""></span>
                     <div class="tileContainer">
                         <span class="tileLabel">Academia</span>
-                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flip-container" 
+                            ontouchstart="this.classList.toggle('hover');"
+                            ng-click="">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
                                     <!-- front content -->
@@ -163,6 +172,20 @@
             </md-toolbar>
         </div>
 
+        <div style="visibility: hidden">
+            <div class="md-dialog-container" id="dialog">
+                <md-dialog>
+                    <md-toolbar class="dialogHeader darkHeader">
+                        header
+                        <md-button class="md-fab dialogCloseButton" ng-click="close()">
+                            <i class="fa fa-times dialogCloseIcon" aria-hidden="true"></i>
+                        </md-button>
+                    </md-toolbar>
+                    <h2>Pre-Rendered Dialog</h2>
+                    hello world
+                </md-dialog>
+            </div>
+        </div>
 
 
         <!-- JS Resources -->
@@ -175,7 +198,7 @@
         <script type="application/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-        <script type="application/javascript" src="js/angular-parallax.js"></script>
+        <script type="application/javascript" src="js/angular-parallax.min.js"></script>
 
         <!-- My JS Resources -->
         <!-- <script type="application/javascript" src="js/typer.js"></script> -->

@@ -1,0 +1,20 @@
+.dialogHeader {
+    min-height: 36px;
+}
+
+.dialogCloseButton {
+    right: 3px;
+    top: 3px;
+    position: absolute !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    min-width: 30px !important;
+    max-width: 30px !important;
+    margin: 0;
+    background-color: transparent !important;
+}
+.dialogCloseIcon {
+    bottom: 12px;
+    position: relative;
+    font-size: 18px;
+}
