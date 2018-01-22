@@ -1,5 +1,11 @@
 // service that serves up static content
 app.service('contentService', function() {
+
+    var contactInfo = {
+        phone: '503-724-7569',
+        email: 'chris@asakawa.me',
+    }
+
     var terminalContent = [
         {
             input: 'whoami',
@@ -61,6 +67,22 @@ app.service('contentService', function() {
         }
 
     }
+    var phoneContent = {
+        header: 'Call Me Directly',
+        body: 'Please leave me a voicemail if I don\'t answer'
+    }
+    var emailContent = {
+        header: 'Send Me A Message',
+        body: ''
+    }
+    var resumeContent = {
+        header: 'Resume',
+        body: '',
+    }
+
+    this.getContactInfo = function() {
+        return contactInfo;
+    }
     this.getTerminalContent = function() {
         return terminalContent;
     }
@@ -69,5 +91,14 @@ app.service('contentService', function() {
     }
     this.getSocialMedia = function() {
         return socialMedia;
+    }
+    this.getPhoneContent = function() {
+        return phoneContent;
+    }
+    this.getEmailContent = function() {
+        return emailContent;
+    }
+    this.getResumeContent = function() {
+        return resumeContent;
     }
 });

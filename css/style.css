@@ -24,6 +24,9 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
     color: #fff;
 }
+.darkFont {
+    color: #201a5b !important;
+}
 .stretch {
     width: 100%;
     height: 100%;

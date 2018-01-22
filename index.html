@@ -175,14 +175,55 @@
         <div style="visibility: hidden">
             <div class="md-dialog-container" id="dialog">
                 <md-dialog>
-                    <md-toolbar class="dialogHeader darkHeader">
-                        header
-                        <md-button class="md-fab dialogCloseButton" ng-click="close()">
-                            <i class="fa fa-times dialogCloseIcon" aria-hidden="true"></i>
-                        </md-button>
-                    </md-toolbar>
-                    <h2>Pre-Rendered Dialog</h2>
-                    hello world
+                    <span class="dialogHeader">{{dialog.content.header}}</span>
+                    <div class="dialogBody">
+                        {{dialog.content.body}}
+
+                        <div ng-show="dialog.isPhone"
+                            style="margin-top:10px" 
+                            layout="row" 
+                            layout-align="center center" 
+                            class="phoneButtonContainer">
+                            <a href="tel:{{contactInfo.phone}}">
+                                <md-button class="md-button md-primary md-raised darkHeader">
+                                    call me @ {{contactInfo.phone}}
+                                </md-button>
+                            </a>
+                        </div>
+                        <md-container ng-show="dialog.isEmail">
+                            <form name="emailForm"> 
+                                <md-input-container class="md-block">
+                                    <label>Name</label>
+                                    <input ng-model="emailObject.name">
+                                </md-input-container>
+                                <md-input-container class="md-block">
+                                    <label>Email</label>
+                                    <input ng-model="emailObject.returnEmail">
+                                </md-input-container>
+                                <md-input-container class="md-block emailMessage">
+                                    <label>Message</label>
+                                    <textarea ng-model="emailObject.message" rows="4">
+                                    </textarea>
+                                </md-input-container>
+                            </form>
+                            <div layout="row" layout-align="center center">
+                                <md-button class="md-button md-primary md-raised darkHeader"
+                                    ng-click="cancelEmail();">
+                                    Cancel
+                                </md-button>
+                                <md-button class="md-button md-primary md-raised darkHeader"
+                                    ng-click="sendEmail();">
+                                    Send
+                                </md-button>
+                                
+                            </div>
+                        </md-container>
+                    </div>
+                    <md-button class="md-button dialogCloseButton" ng-click="closeDialog()" aria-label="close dialog">
+                        <i class="fa fa-times dialogCloseIcon darkFont" aria-hidden="true"></i>
+                    </md-button>
+                    <div layout="row" ng-show="dialog.isConfirm"></div>
+
                 </md-dialog>
             </div>
         </div>
@@ -198,6 +239,7 @@
         <script type="application/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
         <script type="application/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+        <script type="application/javascript" src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
         <script type="application/javascript" src="js/angular-parallax.min.js"></script>
 
         <!-- My JS Resources -->
