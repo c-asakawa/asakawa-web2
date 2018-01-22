@@ -5,8 +5,11 @@ ul {
 md-fab-toolbar .md-fab-toolbar-wrapper {
     height: 55px !important;
 }
+md-fab-actions {
+    height: 55px !important;
+}
 md-fab-toolbar.md-left md-fab-trigger {
-    right: 5px !important;
+    right: 10px !important;
 }
 md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
@@ -21,10 +24,16 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
     color: #fff;
 }
-
+.stretch {
+    width: 100%;
+    height: 100%;
+}
 .bgImage {
     height: 550px;
     width: 100%;
+}
+.navButton {
+    margin-bottom: 5px !important;
 }
 
 .contentContainer {
@@ -46,23 +55,35 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     padding: 10px;
     font-size: 13px;
     overflow: auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
 }
 .profileContainer {
     width: 80%;
     max-width: 250px !important;
     max-height: 200px !important;
 }
-.profilePic {
+.profilePicContiner {
     height: 190px;
     width: 190px;
     margin-left: 3px;
     border-radius: 100px 100px 100px 100px;
     -moz-border-radius: 100px 100px 100px 100px;
     -webkit-border-radius: 100px 100px 100px 100px;
-    border: 1px solid #000000;
 }
+.profilePic {
+    height: 190px;
+    width: 190px;
+    margin-left: 0px;
+    border-radius: 100px 100px 100px 100px;
+    -moz-border-radius: 100px 100px 100px 100px;
+    -webkit-border-radius: 100px 100px 100px 100px;
+}
+
 .contentRow {
-    border:solid 1px grey;
+    /*border:solid 1px grey;*/
     width: 90%;
     height: 170px
 }
