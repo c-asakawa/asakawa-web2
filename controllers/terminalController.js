@@ -48,41 +48,6 @@ app.controller('terminalController', function($scope, $timeout, $interval, conte
                 $interval.cancel(run);
             }
         }, delay);
-         // $timeout(function() {
-        //  $scope.terminalCommand++;
-        //  $timeout(function() {
-        //      $scope.terminalCommand++;
-        //  }, 3500)
-        // }, 3500)
-        // var commandTimeout = $timeout(function() {
- 
-        //     var currentDelay = $scope.terminalCommandList[$scope.terminalCommand].delay;
-        //     var previousDelay, outputDelay;
-
-        //     if ($scope.terminalCommandList[$scope.terminalCommand - 1] == undefined) {
-        //         previousDelay = outputDelay = 0;
-        //     }
-        //     else {
-        //         previousDelay = $scope.terminalCommandList[$scope.terminalCommand - 1].delay;
-        //         outputDelay = ($scope.terminalCommandList[$scope.terminalCommand - 1].outputList.length + 5) * 300;
-
-        //     }
-        //     console.log('delaying terminal current:', currentDelay);
-        //     console.log('delaying terminal previous:', previousDelay);
-        //     console.log('delaying terminal output:', outputDelay);
-
-        //     delay = currentDelay - previousDelay + outputDelay;
-        //     console.log('****** delaying next command:', delay);
-            
-        //     $scope.terminalCommand++;
- 
-        //     if ($scope.terminalCommand == $scope.terminalCommandList.length) {
-        //         $timeout.cancel(commandTimeout); // kill the timeout
-        //     }
-        //     else {
-        //         runTerminalCommands(delay);
-        //     }
-        // }, delay);
 
     }
 });
