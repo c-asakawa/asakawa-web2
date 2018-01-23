@@ -5,7 +5,8 @@
     /* flip the pane when hovered */
     .flip-container:hover .flipper, .flip-container.hover .flipper {
         transform: rotateY(180deg);
-    }
+/*        transform: scaleX(-1);
+*/    }
 
 .flip-container, .front, .back {
     width: 140px;
@@ -40,4 +41,40 @@
 /* back, initially hidden pane */
 .back {
     transform: rotateY(180deg);
+}
+.tileOverlay {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: black;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+}
+.tileIntro {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+}
+.tileContainer {
+    /*border:solid 1px grey;*/
+    height:165px;
+    width:140px;
+    min-width: 140px;
+}
+.tileLabel {
+    bottom: 5px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 200;
+}
+.tileImage {
+    height: 100%;
+    width: 100%;
 }

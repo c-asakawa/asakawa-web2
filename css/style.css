@@ -98,23 +98,17 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     margin-top: 3px;
     display: block;
 }
-
-.tileContainer {
-    /*border:solid 1px grey;*/
-    height:165px;
-    width:140px;
-    min-width: 140px;
-}
-.tileLabel {
-    bottom: 5px;
-    position: relative;
-}
 .footerContainer {
     min-height: 30px;
     height: 30px;
     margin-top: 30px;
 }
-
 .preserveWhiteSpace {
     white-space: pre;
+}
+.xFlip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }

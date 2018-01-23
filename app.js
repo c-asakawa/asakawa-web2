@@ -50,6 +50,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         resetDialogFlags();
         $scope.dialog.content = contentService.getResumeContent();
         $scope.dialog.isResume = true;
+        $scope.dialog.isLarge = true;
         showDialog(ev);
     };
     $scope.closeDialog = function() {
@@ -81,6 +82,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         $scope.dialog.isPhone = false;
         $scope.dialog.isEmail = false;
         $scope.dialog.isResume = false;
+        $scope.dialog.isLarge = false;
         $scope.dialog.isConfirm = false;
     }
 

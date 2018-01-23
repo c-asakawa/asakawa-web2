@@ -101,8 +101,8 @@
                             ng-click="">
                             <div class="flipper">
                                 <md-whiteframe class="md-whiteframe-2dp front">
+                                    <img class="tileImage" src="img/academia.png">
                                     <!-- front content -->
-                                    front
                                 </md-whiteframe>
                                 <md-whiteframe class="md-whiteframe-2dp back">
                                     <!-- back content -->
@@ -112,21 +112,10 @@
                         </div>
                     </div>
                     <div flex-xs="10" flex-gt-xs="16" flex-sm="20" flex-gt-sm="20"></div>
-                    <div class="tileContainer">
-                        <span class="tileLabel">Projects</span>
-                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flipper">
-                                <md-whiteframe class="md-whiteframe-2dp front">
-                                    <!-- front content -->
-                                    front
-                                </md-whiteframe>
-                                <md-whiteframe class="md-whiteframe-2dp back">
-                                    <!-- back content -->
-                                    back
-                                </md-whiteframe>
-                            </div>
-                        </div>
-                    </div>
+                    <tile-flip image-path="'img/academia.png'"
+                        tile-header="'Projects'"
+                        tile-intro="'Academic Achievements at Portland State University and Portland Community College'">        
+                    </tile-flip>
                     <div flex-xs="5" flex-gt-xs="8" flex-sm="10" flex-gt-sm="10"></div>
 
                 </div>
@@ -175,7 +164,7 @@
 
         <div style="visibility: hidden">
             <div class="md-dialog-container" id="dialog">
-                <md-dialog ng-class="dialog.isResume ? 'fullscreen-dialog' : ''">
+                <md-dialog ng-class="dialog.isLarge ? 'largeDialog' : ''">
                     <span class="dialogHeader">{{dialog.content.header}}</span>
                     <div class="dialogBody" ng-show="!dialog.isResume">
                         {{dialog.content.body}}
@@ -193,7 +182,7 @@
                         </div>
                         <md-container ng-show="dialog.isEmail">
                             <form name="emailForm"> 
-                                <md-input-container class="md-block">
+                                <md-input-container class="md-block" >
                                     <label>Name</label>
                                     <input ng-model="emailObject.name">
                                 </md-input-container>
@@ -226,6 +215,11 @@
                     <div layout="row" ng-show="dialog.isConfirm"></div>
                     <md-container ng-show="dialog.isResume">
                         <embed src="files/resume.pdf" width="100%" height="100%" type="application/pdf" style="position:absolute;">
+                            <p>Your web browser doesn't have a PDF plugin.
+                                Instead you can 
+                                <a href="files/resume.pdf" style="z-index: 3">click here to download the PDF file.</a>
+                            </p>
+                        </embed>
                     </md-container>
                 </md-dialog>
             </div>

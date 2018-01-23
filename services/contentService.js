@@ -44,6 +44,26 @@ app.service('contentService', function() {
         }
     }
 
+    var tiles = [
+        { 
+            header: 'Academia',
+            intro: 'Academic Achievements at Portland State University and Portland Community College'
+        },
+        { 
+            header: 'Projects',
+            intro: 'Personal Projects, '
+        },
+        { 
+            header: 'Open Source',
+            intro: 'Open source software development projects'
+        },
+        {
+            header: 'Freelance',
+            intro: 'Web development freelance'
+        },
+
+    ]
+
     var socialMedia = {
         linkedin: {
             label: 'LinkedIn',

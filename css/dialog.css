@@ -21,7 +21,7 @@
     min-height: 30px;
     margin-top: 6px;
     padding-left: 10px;
-    padding-right: 40px;
+    padding-right: 40px; 
     border-bottom: solid 1px #ebebeb;
 }
 .dialogBody {
@@ -36,7 +36,7 @@
     min-width: 400px;
     height: 140px;
 }
-md-dialog.fullscreen-dialog {
+md-dialog.largeDialog {
     max-width: 860px;
     max-height: 90%;
     width: 100%;
