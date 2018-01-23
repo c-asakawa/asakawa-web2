@@ -64,14 +64,14 @@
             </md-fab-toolbar>
 
 
+            <!-- bio / profile image / social links-->
             <div layout="row" layout-align="center center" layout-xs="column" style="margin-top:20px;">
                 <div flex-xs="90" flex-gt-xs="60" 
                     class="bioContainer" 
                     layout-align="center center">
-                    
                     <md-whiteframe class="md-whiteframe-2dp bioFrame">
-                        <h4 style="margin:0 0 8px 0">{{content.bio.title}}</h4>
-                        <span>{{content.bio.body}}</span>
+                        <span class="bioTitle">&ensp;{{content.bio.title}}</span>
+                        <span class="bioBody">{{content.bio.body}}</span>
                     </md-whiteframe>
                 </div>
                 <div flex-xs="90" flex-gt-xs="25" class="profileContainer" layout="row" >
@@ -79,7 +79,6 @@
                         <img class="profilePic" src="img/profilePic.png" />
                     </md-whiteframe>
                     <div style=" width: 80%;max-width: 55px;min-height: 194px;">
-
                         <md-button class="md-fab socialButton darkHeader"
                             ng-repeat="item in socialMedia" 
                             ng-style="$first ? {'margin-top':'0'} : {'margin-top':'5px'}" 
@@ -87,76 +86,41 @@
                             ng-click="clickSocialMedia(item.url)">
                             <i class="{{item.iconClass}} socialIcon" aria-hidden="true"></i>
                         </md-button>
-
                     </div>
                 </div>
             </div>
+
+            <!-- tiles section -->
             <div layout="row" layout-align="center center" layout-xs="column" style="margin-top:20px">
                 <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
                     <span flex-xs="5" flex-gt-xs=""></span>
-                    <div class="tileContainer">
-                        <span class="tileLabel">Academia</span>
-                        <div class="flip-container" 
-                            ontouchstart="this.classList.toggle('hover');"
-                            ng-click="">
-                            <div class="flipper">
-                                <md-whiteframe class="md-whiteframe-2dp front">
-                                    <img class="tileImage" src="img/academia.png">
-                                    <!-- front content -->
-                                </md-whiteframe>
-                                <md-whiteframe class="md-whiteframe-2dp back">
-                                    <!-- back content -->
-                                    back
-                                </md-whiteframe>
-                            </div>
-                        </div>
-                    </div>
+                    <tile-flip image-path="tiles[0].imagePath"
+                        tile-header="tiles[0].header"
+                        tile-intro="tiles[0].intro">        
+                    </tile-flip>
                     <div flex-xs="10" flex-gt-xs="16" flex-sm="20" flex-gt-sm="20"></div>
-                    <tile-flip image-path="'img/academia.png'"
-                        tile-header="'Projects'"
-                        tile-intro="'Academic Achievements at Portland State University and Portland Community College'">        
+                    <tile-flip image-path="tiles[1].imagePath"
+                        tile-header="tiles[1].header"
+                        tile-intro="tiles[1].intro">        
                     </tile-flip>
                     <div flex-xs="5" flex-gt-xs="8" flex-sm="10" flex-gt-sm="10"></div>
-
                 </div>
                 <div flex-xs="90" flex-gt-xs="45" class="contentRow" layout="row" layout-align="center center">
-
                     <div flex-xs="5" flex-gt-xs="8"; flex-sm="10" flex-gt-sm="10"></div>
-                    <div class="tileContainer">
-                        <span class="tileLabel">Open Source</span>
-                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flipper">
-                                <md-whiteframe class="md-whiteframe-2dp front">
-                                    <!-- front content -->
-                                    front
-                                </md-whiteframe>
-                                <md-whiteframe class="md-whiteframe-2dp back">
-                                    <!-- back content -->
-                                    back
-                                </md-whiteframe>
-                            </div>
-                        </div>
-                    </div>
+                    <tile-flip image-path="tiles[2].imagePath"
+                        tile-header="tiles[2].header"
+                        tile-intro="tiles[2].intro">        
+                    </tile-flip>
                     <div flex-xs="10" flex-gt-xs="16"; flex-sm="20" flex-gt-sm="20"></div>
-                    <div class="tileContainer">
-                        <span class="tileLabel">Freelance</span>
-                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flipper">
-                                <md-whiteframe class="md-whiteframe-2dp front">
-                                    <!-- front content -->
-                                    front
-                                </md-whiteframe>
-                                <md-whiteframe class="md-whiteframe-2dp back">
-                                    <!-- back content -->
-                                    back
-                                </md-whiteframe>
-                            </div>
-                        </div>
-                    </div>
-
+                    <tile-flip image-path="tiles[3].imagePath"
+                        tile-header="tiles[3].header"
+                        tile-intro="tiles[3].intro">        
+                    </tile-flip>
                     <span flex-xs="5" flex-gt-xs=""></span>
                 </div>
             </div>
+
+            <!-- page footer -->
             <md-toolbar class="footerContainer darkHeader">
                     footer
             </md-toolbar>

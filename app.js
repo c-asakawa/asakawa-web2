@@ -14,9 +14,9 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     $scope.debug = false;
     $scope.content = contentService.getContent();
     $scope.socialMedia = contentService.getSocialMedia();
-    $scope.background = parallaxHelper.createAnimator(-0.5);
 
     $scope.contactInfo = contentService.getContactInfo();
+    $scope.tiles = contentService.getTiles();
 
     $scope.dialog = defaultDialogConfig;
     $scope.emailObject = {
@@ -24,6 +24,9 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         returnEmail: '',
         message: '',
     }
+
+    // init parallax background image
+    $scope.background = parallaxHelper.createAnimator(-0.5);
 
 
     $scope.clickSocialMedia = function(url) {

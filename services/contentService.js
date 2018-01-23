@@ -47,18 +47,22 @@ app.service('contentService', function() {
     var tiles = [
         { 
             header: 'Academia',
+            imagePath: 'img/academia.png',
             intro: 'Academic Achievements at Portland State University and Portland Community College'
         },
         { 
             header: 'Projects',
+            imagePath: 'img/academia.png',
             intro: 'Personal Projects, '
         },
         { 
             header: 'Open Source',
+            imagePath: 'img/academia.png',
             intro: 'Open source software development projects'
         },
         {
             header: 'Freelance',
+            imagePath: 'img/academia.png',
             intro: 'Web development freelance'
         },
 
@@ -120,5 +124,8 @@ app.service('contentService', function() {
     }
     this.getResumeContent = function() {
         return resumeContent;
+    }
+    this.getTiles = function() {
+        return tiles;
     }
 });

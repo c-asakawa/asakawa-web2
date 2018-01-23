@@ -54,13 +54,25 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     width: 100%;
     display: block;
     height: 190px;
-    padding: 10px;
+    padding: 0;
     font-size: 13px;
     overflow: auto;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     border: 0px solid #000000;
+}
+.bioTitle {
+    margin:5px 0 8px 0;
+    font-size: 18px;
+    font-weight: 300;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ebebeb;
+}
+.bioBody {
+    padding: 0 10px;
+    display: block;
 }
 .profileContainer {
     width: 80%;

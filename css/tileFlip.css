@@ -12,6 +12,10 @@
     width: 140px;
     height: 140px;
     position: relative;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
 }
 
 /* flip speed goes here */
@@ -72,9 +76,13 @@
     bottom: 5px;
     position: relative;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
 }
 .tileImage {
     height: 100%;
     width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
 }
