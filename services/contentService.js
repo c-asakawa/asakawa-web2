@@ -104,6 +104,13 @@ app.service('contentService', function() {
         body: '',
     }
 
+    var copyRightInfo = 'Copyright © ' + getYear() + ' Chris Asakawa'
+
+    function getYear() {
+        var date = new Date()
+        return date.getFullYear();
+    }
+
     this.getContactInfo = function() {
         return contactInfo;
     }
@@ -127,5 +134,8 @@ app.service('contentService', function() {
     }
     this.getTiles = function() {
         return tiles;
+    }
+    this.getCopyRightInfo = function() {
+        return copyRightInfo
     }
 });

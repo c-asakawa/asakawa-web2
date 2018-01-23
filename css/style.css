@@ -118,6 +118,10 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 .preserveWhiteSpace {
     white-space: pre;
 }
+.copyrightText {
+    font-size: 11px;
+    margin: 8px;
+}
 .xFlip {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);

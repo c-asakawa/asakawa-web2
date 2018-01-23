@@ -24,6 +24,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         returnEmail: '',
         message: '',
     }
+    $scope.copyright = contentService.getCopyRightInfo();
 
     // init parallax background image
     $scope.background = parallaxHelper.createAnimator(-0.5);
