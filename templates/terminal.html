@@ -1,16 +1,16 @@
+<div class="terminalHeader">
+    <span class="terminalButton darkgrey" style="background-color:#f95d3a;">
+        <i class="fa fa-times terminalButtonIcon" aria-hidden="true"></i>
+    </span>
+    <span class="terminalButton darkgrey" style="background-color:#f9f33b; margin-left: 20px">
+        <i class="fa fa-minus terminalButtonIcon" aria-hidden="true"></i>
+    </span>
+    <span class="terminalButton darkgrey" style="background-color:#3af94d;  margin-left: 40px">
+        <i class="fa fa-expand terminalButtonIcon" aria-hidden="true"></i>
+    </span>
+    <span class="terminalHeaderText darkgrey">Terminal - 310 x 320</span>
+</div>
 <ul class="terminalContainer" ng-controller="terminalController">
-    <li class="terminalHeader">
-        <span class="terminalButton darkgrey" style="background-color:#f95d3a;">
-            <i class="fa fa-times terminalButtonIcon" aria-hidden="true"></i>
-        </span>
-        <span class="terminalButton darkgrey" style="background-color:#f9f33b; margin-left: 20px">
-            <i class="fa fa-minus terminalButtonIcon" aria-hidden="true"></i>
-        </span>
-        <span class="terminalButton darkgrey" style="background-color:#3af94d;  margin-left: 40px">
-            <i class="fa fa-expand terminalButtonIcon" aria-hidden="true"></i>
-        </span>
-        <span class="darkgrey" style="margin-left:40px;">terminal - 310 x 320</span>
-    </li>
     <li ng-repeat="command in terminalCommandList">
         <div ng-show="terminalCommand == $index && command.show">
             <input-line></input-line>

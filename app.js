@@ -49,6 +49,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     $scope.resume = function(ev) {
         resetDialogFlags();
         $scope.dialog.content = contentService.getResumeContent();
+        $scope.dialog.isResume = true;
         showDialog(ev);
     };
     $scope.closeDialog = function() {
