@@ -12,6 +12,7 @@
     width: 140px;
     height: 140px;
     position: relative;
+    cursor: pointer;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;

@@ -126,6 +126,7 @@
             </md-toolbar>
         </div>
 
+        <!-- dialog -->
         <div style="visibility: hidden">
             <div class="md-dialog-container" id="dialog">
                 <md-dialog ng-class="dialog.isLarge ? 'largeDialog' : ''">
@@ -133,6 +134,7 @@
                     <div class="dialogBody" ng-show="!dialog.isResume">
                         {{dialog.content.body}}
 
+                        <!-- dialog phone content -->
                         <div ng-show="dialog.isPhone"
                             style="margin-top:10px" 
                             layout="row" 
@@ -144,19 +146,27 @@
                                 </md-button>
                             </a>
                         </div>
+
+                        <!-- dialog email content -->
                         <md-container ng-show="dialog.isEmail">
-                            <form name="emailForm"> 
-                                <md-input-container class="md-block" >
+                            <form name="emailForm" layout="column" layout-align="center center"> 
+                                <md-input-container class="dialogInput" style="margin-top: 10px;">
                                     <label>Name</label>
-                                    <input ng-model="emailObject.name">
+                                    <input ng-model="emailObject.name" md-no-asterisk="" required="">
                                 </md-input-container>
-                                <md-input-container class="md-block">
+                                <md-input-container class="dialogInput">
                                     <label>Email</label>
-                                    <input ng-model="emailObject.returnEmail">
+                                    <input ng-model="emailObject.returnEmail" md-no-asterisk="" required="">
                                 </md-input-container>
-                                <md-input-container class="md-block emailMessage">
+                                <md-input-container 
+                                    class="dialogInput emailMessage">
                                     <label>Message</label>
-                                    <textarea ng-model="emailObject.message" rows="4">
+                                    <textarea ng-model="emailObject.message" 
+                                        rows="4"
+                                        md-no-resize=""
+                                        md-no-autogrow=""
+                                        md-no-asterisk=""
+                                        required="">
                                     </textarea>
                                 </md-input-container>
                             </form>
@@ -169,14 +179,16 @@
                                     ng-click="sendEmail();">
                                     Send
                                 </md-button>
-                                
                             </div>
                         </md-container>
+
                     </div>
                     <md-button class="md-button dialogCloseButton" ng-click="closeDialog()" aria-label="close dialog">
                         <i class="fa fa-times dialogCloseIcon darkFont" aria-hidden="true"></i>
                     </md-button>
-                    <div layout="row" ng-show="dialog.isConfirm"></div>
+                    <!-- <div layout="row" ng-show="dialog.isConfirm"></div> -->
+
+                    <!-- dialog resume content -->
                     <md-container ng-show="dialog.isResume">
                         <embed src="files/resume.pdf" width="100%" height="100%" type="application/pdf" style="position:absolute;">
                             <p>Your web browser doesn't have a PDF plugin.
