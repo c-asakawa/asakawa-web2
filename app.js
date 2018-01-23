@@ -1,6 +1,7 @@
 //Define an angular module for our app
 var app = angular.module('asakawaApp', ['ngMaterial', 'duParallax']);
 
+
 app.controller('appController', function($scope, $window, $timeout, $mdDialog, contentService, parallaxHelper) {
 
     const defaultDialogConfig = {
@@ -12,6 +13,10 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     }
 
     $scope.debug = false;
+
+    $scope.terminalCommandList = contentService.getTerminalContent();
+    $scope.terminalCommandIndex = 0;
+
     $scope.content = contentService.getContent();
     $scope.socialMedia = contentService.getSocialMedia();
 
@@ -29,6 +34,24 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     // init parallax background image
     $scope.background = parallaxHelper.createAnimator(-0.5);
 
+    appLoad();
+
+    function appLoad() {
+        var loading_screen = pleaseWait({
+            logo: "",
+            backgroundColor: '#FFF',
+            loadingHtml: '                              \
+                <div class="spinner">                   \
+                    <div class="double-bounce1"></div>  \
+                    <div class="double-bounce2"></div>  \
+                </div>'
+        });
+        // spin for a second, giving some time for the images to load.
+        $timeout( function() {
+            loading_screen.finish();
+        }, 1000);
+
+    }
 
     $scope.clickSocialMedia = function(url) {
         console.log('clicked social media button', url);
@@ -89,19 +112,4 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         $scope.dialog.isLarge = false;
         $scope.dialog.isConfirm = false;
     }
-
-    // function dialogController($scope, $mdDialog) {
-    //     console.log('dialog controller hit')
-
-    //     $scope.hide = function() {
-    //         $mdDialog.hide();
-    //     };
-    //     $scope.cancel = function() {
-    //         $mdDialog.cancel();
-    //     };
-    //     $scope.answer = function(answer) {
-    //         $mdDialog.hide(answer);
-    //     };
-    // }
-
 });

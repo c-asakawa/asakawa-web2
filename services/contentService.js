@@ -9,7 +9,6 @@ app.service('contentService', function() {
     var terminalContent = [
         {
             input: 'whoami',
-            delay: 2000,
             show: true,
             outputList: [ 
                 { line: 'Hi, my name is Chris Asakawa.', show: false }, 
@@ -18,7 +17,6 @@ app.service('contentService', function() {
         },
         {
             input: 'cat welcome.txt',
-            delay: 5000,
             show: false,
             outputList: [ 
                 { line: '***********************************', show: false }, 
@@ -29,6 +27,13 @@ app.service('contentService', function() {
                 { line: '*  - Open Source Projects         *', show: false }, 
                 { line: '*  - Freelance Work               *', show: false }, 
                 { line: '***********************************', show: false }, 
+            ],
+        },
+        {
+            input: 'clear',
+            show: false,
+            outputList: [ 
+                { line: '', show: false }, 
             ],
         }
     ]
