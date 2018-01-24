@@ -155,20 +155,28 @@ app.service('contentService', function() {
                 'Perspectives on Terrorism',
             ]
         }
-
-
-
-     
-
-
-
-
-
-
     }
+
     var projectsContent = {
-        header: 'Projects',
+        header: 'Projects', 
         body: '',
+        skateboardHeader: 'Custom Electric Skateboard',
+        skateboardSummary: 'I started designing and prototyping electric skateboard builds back ' +
+                           'in 2014, and since then I have created five separate builds. My most ' + 
+                           'recent build gets a range of about 10 miles, and has a top speed of 41 mph.',
+        skateboardBuilds: [
+            { tabLabel: 'v5', title: 'Build Version 5 - Current', imageList: [ 'img/skateboardBuilds/6.png', 'img/skateboardBuilds/7.png'] },
+            { tabLabel: 'v4', title: 'Build Version 4 - 2016', imageList: [ 'img/skateboardBuilds/5.png' ] },
+            { tabLabel: 'v3', title: 'Build Version 3 - 2015', imageList: [ 'img/skateboardBuilds/3.png', 'img/skateboardBuilds/4.png' ] },
+            { tabLabel: 'v2', title: 'Build Version 2 - 2014', imageList: [ 'img/skateboardBuilds/2.png' ] },
+            { tabLabel: 'v1', title: 'Build Version 1 - 2014', imageList: [ 'img/skateboardBuilds/1.png' ] },
+        ],
+        lifeAlertHeader: 'Localized Life Alert System',
+        lifeAlert: 'This project is currently a work in progress. The purpose of this project is to ' +
+                   'be a localized life alert system. This raspberry pi syncs syncs up to a key fob ' +
+                   'with multiple buttons. Currently there are two functions: the first is sounding ' +
+                   'off a very loud high pitched buzzer, the second function is set up to send out '  +
+                   'an emergency text message to predetermined hard coded phone numbers.'
     }
     var opensourceContent = {
         header: 'Open Source',

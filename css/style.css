@@ -156,3 +156,26 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     font-size: 18px;
     font-weight: 300;
 }
+
+.projectsImageFrame {
+    height: 210px;
+    width: 310px;
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+.projectHeader {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.projectsSummary {
+    max-width: 636px;
+    padding: 20px 10px;
+    font-size: 13px;
+}
+.projectsTextFrame {
+    padding: 20px;
+    font-size: 13px;
+}

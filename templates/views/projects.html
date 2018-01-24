@@ -1,10 +1,26 @@
 <md-content ng-show="dialog.isProjects">
+    <div class="projectHeader">{{dialog.content.skateboardHeader}}</div>
+    <div class="projectsSummary">{{dialog.content.skateboardSummary}}</div>
     <md-tabs md-dynamic-height="" md-border-bottom="">
-        <md-tab label="v1">
+        <md-tab label="{{tab.tabLabel}}" ng-repeat="tab in dialog.content.skateboardBuilds">
             <md-content class="md-padding">
-            <div class="md-display-2">build v1</div>
-            <img ng-src="img/skateboardBuilds/1.png">
+            <div class="projectHeader" flex="100">{{tab.title}}</div>
+            <div layout="row" layout-align="center center" layout-xs="column">
+                <md-whiteframe class="md-whiteframe-2dp projectsImageFrame" ng-repeat="image in tab.imageList">
+                    <img class="stretch" ng-src="{{image}}"/>
+                </md-whiteframe>
+            </div>
             </md-content>
         </md-tab>
     </md-tabs>
+    <md-divider></md-divider>
+    <div class="projectHeader" flex="100" style="margin-top:40px;">{{dialog.content.lifeAlertHeader}}</div>
+    <div layout="row" layout-align="center center" layout-xs="column">
+        <md-whiteframe class="md-whiteframe-2dp projectsImageFrame">
+            <img class="stretch" ng-src="img/localLifeAlert.png"/>
+        </md-whiteframe>
+        <md-whiteframe class="md-whiteframe-2dp projectsImageFrame projectsTextFrame">
+            {{dialog.content.lifeAlert}}
+        </md-whiteframe>
+    </div>
 </md-content>
