@@ -37,16 +37,15 @@ app.service('contentService', function() {
             ],
         }
     ]
-    var content = {
-        bio: {
-            title: 'Why I Do What I Do',
-            body: 'Something that will always interest me is making things.        \
-                   Which why I love what I do, there is nothing more rewarding then developing    \
-                   software to solve complex problems. Writing code makes me feel empowered, to   \
-                   create something useful out of nothing. The potential and innovations          \
-                   of software never ceases to amaze me, and I look forward to learning more in   \
-                   my future in programming.'
-        }
+    var bio = {
+        title: 'Why I Do What I Do',
+        body: 'Something that will always interest me is making things.        \
+               Which why I love what I do, there is nothing more rewarding then developing    \
+               software to solve complex problems. Writing code makes me feel empowered, to   \
+               create something useful out of nothing. The potential and innovations          \
+               of software never ceases to amaze me, and I look forward to learning more in   \
+               my future in programming.'
+    
     }
 
     var tiles = [
@@ -108,39 +107,99 @@ app.service('contentService', function() {
         header: 'Resume',
         body: '',
     }
+    var academiaContent = {
+        header: 'Academia',
+        body: '',
+        psu: {
+            logo: 'img/psuBanner.png',
+            summary: 'I graduated from PSU with a bachelors degree in computer science in the summer of 2016.',
+            listHeader: 'PSU Course List:',
+            classList: [
+                'Data Structures',
+                'Programming Systems',
+                'Discrete Structures I & II',
+                'Software Engineering',
+                'Computational Structures',
+                'Operating Systems',
+                'Computer Hardware',
+                'Language & Compiler Design I & II',
+                'Databases',
+                'Computer Vision',
+                'Network Security',
+                'Open Source Software',
+                'Capstone I & II',
+                'Open Source Software',
+                'Software Development Ethics',
+            ]
+        },
+        pcc: {
+            logo: 'img/pccBanner.png',
+            summary: 'At PCC I was award an associates in liberal arts.',
+            listHeader: 'PCC Course List:',
+            classList: [
+                'Physics I, II, & III',
+                'Calculus I, II, & III',
+                'Statistics',
+                'Discrete Mathematics',
+                'Linear Algebra',
+                'Technical Writing',
+                'Public Speaking',
+                'General Psychology I & II',
+                'General Sociology I & II',
+                'General Political Science I & II',
+                'Philosophy Critical Thinking',
+                'Philosophy of Pseudoscience',
+                'Philosophy of Religion',
+                'Philosophy of Business',
+                'Environmental Science',
+                'Perspectives on Terrorism',
+            ]
+        }
 
-    var copyRightInfo = 'Copyright © ' + getYear() + ' Chris Asakawa'
+
+
+     
+
+
+
+
+
+
+    }
+    var projectsContent = {
+        header: 'Projects',
+        body: '',
+    }
+    var opensourceContent = {
+        header: 'Open Source',
+        body: '',
+    }
+    var freelanceContent = {
+        header: 'Freelance',
+        body: '',
+    }
+
+    var copyRightInfo = 'Copyright © ' + getYear() + ' Chris Asakawa';
+
+
+
 
     function getYear() {
         var date = new Date()
         return date.getFullYear();
     }
 
-    this.getContactInfo = function() {
-        return contactInfo;
-    }
-    this.getTerminalContent = function() {
-        return terminalContent;
-    }
-    this.getContent = function() {
-        return content;
-    }
-    this.getSocialMedia = function() {
-        return socialMedia;
-    }
-    this.getPhoneContent = function() {
-        return phoneContent;
-    }
-    this.getEmailContent = function() {
-        return emailContent;
-    }
-    this.getResumeContent = function() {
-        return resumeContent;
-    }
-    this.getTiles = function() {
-        return tiles;
-    }
-    this.getCopyRightInfo = function() {
-        return copyRightInfo
-    }
+    this.getContactInfo = function() { return contactInfo; }
+    this.getTerminalContent = function() { return terminalContent; }
+    this.getBioContent = function() { return bio; }
+    this.getSocialMedia = function() { return socialMedia; }
+    this.getPhoneContent = function() { return phoneContent; }
+    this.getEmailContent = function() { return emailContent; }
+    this.getResumeContent = function() { return resumeContent; }
+    this.getTiles = function() { return tiles; }
+    this.getCopyRightInfo = function() { return copyRightInfo; }
+    this.getAcademiaContent = function() { return academiaContent; }
+    this.getProjectsContent = function() { return projectsContent; }
+    this.getOpensourceContent = function() { return opensourceContent; }
+    this.getFreelanceContent = function() { return freelanceContent; }
 });

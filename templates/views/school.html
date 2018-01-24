@@ -1,0 +1,35 @@
+<md-container ng-show="dialog.isAcademia" layout="row" layout-align="center center" layout-xs="column">
+    <md-whiteframe class="md-whiteframe-2dp schoolFrame">
+        <div class="dialogBanner">
+            <img class="stretch" ng-src="{{dialog.content.psu.logo}}">
+        </div>
+        <div class="schooolSummary">{{dialog.content.psu.summary}}</div>
+        <div class="schooolListHeader">{{dialog.content.psu.listHeader}}</div>
+        <md-list class="md-dense">
+            <md-list-item class="md-1-line singleLineListEntry" 
+                ng-repeat="class in dialog.content.psu.classList track by $index"
+                ng-click="null">
+                <div class="md-list-item-text">
+                    {{class}}
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-whiteframe>
+
+    <md-whiteframe class="md-whiteframe-2dp schoolFrame">
+        <div class="dialogBanner">
+            <img class="stretch" ng-src="{{dialog.content.pcc.logo}}">
+        </div>
+        <div class="schooolSummary">{{dialog.content.pcc.summary}}</div>
+        <div class="schooolListHeader">{{dialog.content.pcc.listHeader}}</div>
+        <md-list class="md-dense">
+            <md-list-item class="md-1-line singleLineListEntry" 
+                ng-repeat="class in dialog.content.pcc.classList track by $index"
+                ng-click="null">
+                <div class="md-list-item-text">
+                    {{class}}
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-whiteframe>
+</md-container>

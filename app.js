@@ -9,6 +9,10 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         isEmail: false,
         isResume: false,
         isConfirm: false,
+        isAcademia: false,
+        isProjects: false,
+        isOpensource: false,
+        isFreelance: false,
         content: {}
     }
 
@@ -17,7 +21,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     $scope.terminalCommandList = contentService.getTerminalContent();
     $scope.terminalCommandIndex = 0;
 
-    $scope.content = contentService.getContent();
+    $scope.bio = contentService.getBioContent();
     $scope.socialMedia = contentService.getSocialMedia();
 
     $scope.contactInfo = contentService.getContactInfo();
@@ -35,6 +39,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     $scope.background = parallaxHelper.createAnimator(-0.5);
 
     appLoad();
+
 
     function appLoad() {
         var loadingScreen = pleaseWait({
@@ -60,6 +65,35 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         $timeout(function() {
             $window.open(url, '_blank');
         }, 300)
+    }
+
+    $scope.clickTile = function(ev, index) {
+        console.log('clicked tile:', index);
+        resetDialogFlags();
+
+        switch(index) {
+            case 0: 
+                $scope.dialog.isAcademia = true;
+                $scope.dialog.content = contentService.getAcademiaContent();
+                break;
+            case 1: 
+                $scope.dialog.isProjects = true; 
+                $scope.dialog.content = contentService.getProjectsContent();
+                break;
+            case 2: 
+                $scope.dialog.isOpensource = true; 
+                $scope.dialog.content = contentService.getOpensourceContent();
+                break;
+            case 3: 
+                $scope.dialog.isFreelance = true; 
+                $scope.dialog.content = contentService.getFreelanceContent();
+                break;
+            default: 
+                break;
+        }
+
+        console.log('current state of dialog:', $scope.dialog)
+        showDialog(ev);
     }
 
     $scope.phone = function(ev) {
@@ -111,6 +145,9 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         $scope.dialog.isEmail = false;
         $scope.dialog.isResume = false;
         $scope.dialog.isLarge = false;
-        $scope.dialog.isConfirm = false;
+        $scope.dialog.isAcademia = false;
+        $scope.dialog.isProjects = false;
+        $scope.dialog.isOpensource = false;
+        $scope.dialog.isFreelance = false;
     }
 });

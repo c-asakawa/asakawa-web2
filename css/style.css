@@ -15,7 +15,10 @@ md-fab-toolbar.md-left md-fab-trigger {
 md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
 }
-
+.dialogBanner {
+    width: 250px;
+    height: 80px;
+}
 .darkgrey {
     color: #757575;
 }
@@ -126,4 +129,30 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.md-dense :not(.md-dense-disabled) .md-button:not(.md-dense-disabled), .md-dense>.md-button:not(.md-dense-disabled) {
+    min-height: 20px !important;
+    line-height: 20px !important;
+}
+
+.singleLineListEntry {
+    height: 20px !important;
+    max-height: 20px !important;
+    min-height: 20px !important;
+    line-height: 20px !important;
+}
+.schoolFrame {
+    margin: 5px !important;
+    height: 510px;
+}
+.schooolSummary {
+    width: 230px;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+.schooolListHeader {
+    padding: 10px 10px 0 10px;
+    font-size: 18px;
+    font-weight: 300;
 }
