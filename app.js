@@ -37,7 +37,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     appLoad();
 
     function appLoad() {
-        var loading_screen = pleaseWait({
+        var loadingScreen = pleaseWait({
             logo: "",
             backgroundColor: '#FFF',
             loadingHtml: '                              \
@@ -47,8 +47,9 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
                 </div>'
         });
         // spin for a second, giving some time for the images to load.
+        // TODO: figure out something better
         $timeout( function() {
-            loading_screen.finish();
+            loadingScreen.finish();
         }, 1000);
 
     }

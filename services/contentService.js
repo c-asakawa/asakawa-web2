@@ -57,17 +57,17 @@ app.service('contentService', function() {
         },
         { 
             header: 'Projects',
-            imagePath: 'img/academia.png',
+            imagePath: 'img/projects.png',
             intro: 'Personal Projects, '
         },
         { 
             header: 'Open Source',
-            imagePath: 'img/academia.png',
+            imagePath: 'img/opensource.png',
             intro: 'Open source software development projects'
         },
         {
             header: 'Freelance',
-            imagePath: 'img/academia.png',
+            imagePath: 'img/freelance.png',
             intro: 'Web development freelance'
         },
 
