@@ -1,0 +1,24 @@
+<div layout="row" layout-align="center center" layout-xs="column" style="margin-top:20px;">
+    <div flex-xs="90" flex-gt-xs="60" 
+        class="bioContainer" 
+        layout-align="center center">
+        <md-whiteframe class="md-whiteframe-2dp bioFrame">
+            <span class="bioTitle">&ensp;{{content.bio.title}}</span>
+            <span class="bioBody">{{content.bio.body}}</span>
+        </md-whiteframe>
+    </div>
+    <div flex-xs="90" flex-gt-xs="25" class="profileContainer" layout="row" >
+        <md-whiteframe class="md-whiteframe-2dp profilePicContiner">
+            <img class="profilePic" src="img/profilePic.png" />
+        </md-whiteframe>
+        <div style=" width: 80%;max-width: 55px;min-height: 194px;">
+            <md-button class="md-fab socialButton darkHeader"
+                ng-repeat="item in socialMedia" 
+                ng-style="$first ? {'margin-top':'0'} : {'margin-top':'5px'}" 
+                aria-label="{{item.label}}"
+                ng-click="clickSocialMedia(item.url)">
+                <i class="{{item.iconClass}} socialIcon" aria-hidden="true"></i>
+            </md-button>
+        </div>
+    </div>
+</div>

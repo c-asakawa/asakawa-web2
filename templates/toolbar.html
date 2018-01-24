@@ -1,0 +1,33 @@
+<md-fab-toolbar md-open="false" count="0" md-direction="left">
+    <md-fab-trigger class="align-with-text">
+        <md-button aria-label="menu" class="md-fab md-mini darkHeader">
+            <md-icon style="display: unset">
+                <!-- Put what ever youwant here -->
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </md-icon>
+        </md-button>
+    </md-fab-trigger>
+
+    <md-toolbar>
+        <md-fab-actions class="md-toolbar-tools">
+            <md-button class="navButton" 
+                aria-label="email"
+                ng-click="email($event)">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                &nbsp;Email
+            </md-button>
+            <md-button class="navButton" 
+                aria-label="phone"
+                ng-click="phone($event)">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                &nbsp;Phone
+            </md-button>
+            <md-button class="navButton" 
+                aria-label="resume"
+                ng-click="resume($event)">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                &nbsp;Resume
+            </md-button>
+        </md-fab-actions>
+    </md-toolbar>
+</md-fab-toolbar>
