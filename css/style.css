@@ -172,7 +172,7 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
 }
 .projectsSummary {
     max-width: 636px;
-    padding: 20px 10px;
+    padding: 0px 10px;
     font-size: 13px;
 }
 .projectsTextFrame {

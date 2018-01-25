@@ -173,10 +173,10 @@ app.service('contentService', function() {
         ],
         lifeAlertHeader: 'Localized Life Alert System',
         lifeAlert: 'This project is currently a work in progress. The purpose of this project is to ' +
-                   'be a localized life alert system. This raspberry pi syncs syncs up to a key fob ' +
+                   'be a localized life alert system. This raspberry pi syncs up to a key fob ' +
                    'with multiple buttons. Currently there are two functions: the first is sounding ' +
                    'off a very loud high pitched buzzer, the second function is set up to send out '  +
-                   'an emergency text message to predetermined hard coded phone numbers.'
+                   'an emergency text message to hard coded phone numbers.'
     }
     var opensourceContent = {
         header: 'Open Source',
