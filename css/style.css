@@ -15,7 +15,12 @@ md-fab-toolbar.md-left md-fab-trigger {
 md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
 }
-
+md-content.md-default-theme, md-content {
+    background-color: #fafafa !important;
+}
+md-dialog {
+    background-color: #fafafa !important;
+}
 .dialogBanner {
     width: 250px;
     height: 80px;
