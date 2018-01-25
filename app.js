@@ -82,7 +82,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
                 break;
             case 2: 
                 $scope.dialog.isOpensource = true;
-                // $scope.dialog.isLarge = true;
+                $scope.dialog.isLarge = true;
                 $scope.dialog.content = contentService.getOpensourceContent();
                 break;
             case 3: 

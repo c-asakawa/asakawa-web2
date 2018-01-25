@@ -26,6 +26,7 @@
 }
 .dialogBody {
     padding: 10px;
+    overflow: auto
 }
 .dialogCloseIcon {
     bottom: 2px;

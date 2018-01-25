@@ -15,6 +15,7 @@ md-fab-toolbar.md-left md-fab-trigger {
 md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     background-color: #201a5b !important;
 }
+
 .dialogBanner {
     width: 250px;
     height: 80px;
@@ -184,6 +185,8 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     width: 300px;
     height: 155px;
     min-width: 300px;
+    max-width: 300px !important;
+    margin: 10px;
 }
 .opensourceFishSummary {
     width: 280px;
@@ -238,3 +241,12 @@ md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {
     width: 80%;
     margin-left: 10%;
 }
+.wideFrame {
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 10px;
+    max-width: 500px;
+    font-size: 13px;
+}
+

@@ -181,6 +181,51 @@ app.service('contentService', function() {
     var opensourceContent = {
         header: 'Open Source',
         body: '',
+        fishFate: {
+            tabLabel: 'fish tank rng',
+            header: 'Fish Tank Random Number Generator',
+            repoLabel: 'Goto The Repo',
+            repoLink: 'https://github.com/FishyByte',
+            summary: 'This project uses a Raspberry Pi 3 with a camera to create alive stream' +
+                     'of my fish tank. This live stream is then used to generate a random number.',
+            setupHeader: 'Fish Tank Setup',
+            setupDescribe: 'This raspberry pi camera streams video of the fish. The fish are then tracked by their color to give ' +
+                           'an x and y position of each fish for each frame of the video.',
+            movementHeader: 'Translating Fish Movement',
+            movementDescribe: 'Fish movements are tracked by their position on an x/y plane, this change of position is used ' + 
+                              'to generate a binary number as shown on the the picture to the left.',
+            distributionHeader: 'Random Distribution',
+            distributionDescribe: 'This is a scatter plot graph that shows the distribution of about 2000 randomly generated x ' +  
+                                  'and y values between 0 to 128, generated from the fish.',
+            googleLabel: 'goto google play',
+            googleDescribe: 'I also created an android application that uses this on the Google play market.',
+        },
+        voiceSynth: {
+            tabLabel: 'Voice Synthesizer',
+            header: 'Text to Speech Voice Synthesizer',
+            repoLink: 'https://github.com/c-asakawa/synthesize-speech',
+            repoLabel: 'Goto The Repo',
+            demoLink: 'http://voice.asakawa.me',
+            summary: 'This application synthesizes text into speech. The purpose of this tool is ' +
+                     'to help individuals communicate who do not have the ability to speak. ' +
+                     'This app utilizes machine learning to create a more natural sounding voice.',
+            demoImage: 'img/voiceSynthDemo.png',
+            demoDescribe: 'Currently this app is being hosted at voice.asakawa.me, try this app out. ' + 
+                          'Also feel free share this application with anyone who needs it.',
+            demoLabel: 'View the application',
+        },
+        rmls: {
+            tabLabel: 'rmls parser',
+            header: 'RMLS Parser',
+            repoLink: 'https://github.com/c-asakawa/RMLS-Parse',
+            repoLabel: 'Goto The Repo',
+            demoImage: 'img/rmlsDemo.png',
+            summary: 'This application is currently a work in progress. The purpose of this app is to give more functionality than what RMLS\'s ' + 
+                    'website offers. This tool scrapes data from RMLS\'s website; then parses out the data so that it can be filtered ' + 
+                     'and searched. Then wraps this data with a nice UI and also plots the data onto Google maps.',
+
+        },
+
     }
     var freelanceContent = {
         header: 'Freelance',
