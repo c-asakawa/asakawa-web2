@@ -1,0 +1,72 @@
+<md-content ng-show="dialog.isOpensource">
+    <div class="projectHeader">Fish Tank Random Number Generator</div>
+    <div layout="row" layout-align="center center" layout-xs="column">
+        <md-whiteframe class="md-whiteframe-2dp opensourceFishSummary" flex="20">
+            <md-button class="md-button darkHeader googlePlayButton" 
+                ng-click="delayRedirect('https://github.com/FishyByte')">
+                <i class="fa fa-github" aria-hidden="true" style="font-size: 18px"></i>
+                Goto The Repo
+            </md-button>
+            This project uses a Raspberry Pi 3
+            with a camera to create a live stream of my fish tank. This live stream
+            is then used to generate a random number.
+        </md-whiteframe>
+        <div class="fishDemo" flex="70">
+            <img class="stretch" ng-src="img/fishFate/fishDemo.gif" />
+        </div>
+    </div>
+    
+
+
+
+    <div layout="row" layout-align="center center" layout-xs="column">
+
+        <md-whiteframe class="md-whiteframe-2dp fishFrame">
+            <div class="projectHeader">Fish Tank Setup</div>
+            <div class="fishFrameImage">
+                <img class="stretch" ng-src="img/fishFate/fishSetup.png" />
+            </div>
+            <span class="fishFrameText">
+                We used a raspberry pi camera to stream a video of the fish. We then process this video to give us an x and y position of each fish for each frame of the video.
+            </span>
+        </md-whiteframe>
+        <md-whiteframe class="md-whiteframe-2dp fishFrame">
+            <div class="projectHeader">Translating Fish Movement</div>
+            <div class="fishFrameImage">
+                <img class="stretch" ng-src="img/fishFate/fishPosition.png" />
+            </div>
+            <span class="fishFrameText">
+                Fish movements are tracked by their position on an x/y plane, this change of position is used to generate a binary number as shown on the the picture to the left.
+            </span>
+        </md-whiteframe>
+    </div>
+
+    <div layout="row" layout-align="center center" layout-xs="column">
+        <md-whiteframe class="md-whiteframe-2dp fishFrame">
+            <div class="projectHeader">Random Distribution</div>
+            <div class="fishFrameImage">
+                <img class="stretch" ng-src="img/fishFate/fishGraph.png" />
+            </div>
+            <span class="fishFrameText">
+                This is a scatter plot graph that shows the distribution of about 2000 randomly generated x and y values between 0 to 128, generated from the fish.
+            </span>
+        </md-whiteframe>
+
+        <md-whiteframe class="md-whiteframe-2dp fishFrame">
+            <div class="fishIcon">
+                <img class="stretch" ng-src="img/fishFate/fishIcon.png" />
+            </div>
+            <span class="fishFateText">
+                I also created an android application that uses this on the Google play market.
+            </span>
+            <md-button class="md-button darkHeader googlePlayButton" 
+                ng-click="delayRedirect('https://play.google.com/store/apps/details?id=com.ionicframework.fishfate542805')">
+                <i class="fa fa-google" aria-hidden="true" style="font-size: 18px"></i>
+                goto google play 
+            </md-button>
+        </md-whiteframe>
+
+    </div>
+
+    
+</md-content>

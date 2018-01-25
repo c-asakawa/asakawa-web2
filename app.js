@@ -59,7 +59,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
 
     }
 
-    $scope.clickSocialMedia = function(url) {
+    $scope.delayRedirect = function(url) {
         console.log('clicked social media button', url);
         // let the ripple animation play out
         $timeout(function() {
@@ -81,7 +81,8 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
                 $scope.dialog.content = contentService.getProjectsContent();
                 break;
             case 2: 
-                $scope.dialog.isOpensource = true; 
+                $scope.dialog.isOpensource = true;
+                // $scope.dialog.isLarge = true;
                 $scope.dialog.content = contentService.getOpensourceContent();
                 break;
             case 3: 

@@ -16,7 +16,7 @@
                 ng-repeat="item in socialMedia" 
                 ng-style="$first ? {'margin-top':'0'} : {'margin-top':'5px'}" 
                 aria-label="{{item.label}}"
-                ng-click="clickSocialMedia(item.url)">
+                ng-click="delayRedirect(item.url)">
                 <i class="{{item.iconClass}} socialIcon" aria-hidden="true"></i>
             </md-button>
         </div>
