@@ -61,7 +61,9 @@ md-dialog {
 .bioFrame {
     width: 100%;
     display: block;
-    height: 190px;
+    height: auto;
+    min-height: 190px;
+    margin-bottom: 20px;
     padding: 0;
     font-size: 13px;
     overflow: auto;
@@ -79,7 +81,7 @@ md-dialog {
     border-bottom: 1px solid #ebebeb;
 }
 .bioBody {
-    padding: 0 10px;
+    padding: 10px;
     display: block;
 }
 .profileContainer {
@@ -107,7 +109,8 @@ md-dialog {
 .contentRow {
     /*border:solid 1px grey;*/
     width: 90%;
-    height: 170px
+    height: 170px;
+    margin-bottom: 10px;
 }
 .socialButton {
     max-height: 38px;
@@ -156,6 +159,7 @@ md-dialog {
     width: 230px;
     padding: 0 10px 10px 10px;
     border-bottom: 1px solid #ebebeb;
+    font-size: 13px;
 }
 .schooolListHeader {
     padding: 10px 10px 0 10px;

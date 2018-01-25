@@ -224,12 +224,31 @@ app.service('contentService', function() {
                     'website offers. This tool scrapes data from RMLS\'s website; then parses out the data so that it can be filtered ' + 
                      'and searched. Then wraps this data with a nice UI and also plots the data onto Google maps.',
 
-        },
-
+        }
     }
     var freelanceContent = {
         header: 'Freelance',
         body: '',
+        fiveotree: {
+            tabLabel: 'five o tree',
+            header: 'Five O Tree',
+            logo: 'img/fiveotreeLogo.png',
+            siteLink: 'http://fiveotree.com/',
+            siteLabel: 'goto fiveotree\'s site',
+            demoImage: 'img/fiveotreeDemo.png',
+            summary: 'Designed and developed an e-commerce site for a Portland Oregon clothing store.',
+
+        },
+        talus: {
+            tabLabel: 'talus design',
+            header: 'Talus Design 3D',
+            logo: 'img/talusLogo.png',
+            siteLink: 'http://talusdesign3d.com/',
+            siteLabel: 'goto talus\'s Repo',
+            demoImage: 'img/talusDemo.png',
+            summary: 'Designed and developed an informational site for a Portland Oregon 3D printing company.',
+
+        },
     }
 
     var copyRightInfo = 'Copyright © ' + getYear() + ' Chris Asakawa';

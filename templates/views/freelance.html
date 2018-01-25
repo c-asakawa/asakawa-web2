@@ -1,3 +1,44 @@
 <md-content ng-show="dialog.isFreelance">
-    freelance content
+    <md-tabs md-dynamic-height="" md-border-bottom="" md-center-tabs="">
+
+        <md-tab label="{{dialog.content.fiveotree.tabLabel}}">
+            <md-content class="md-padding" layout="column" layout-align="center center">
+                <div class="freelanceLogo">
+                    <img class="stretch" ng-src="{{dialog.content.fiveotree.logo}}" \>
+                </div>
+                <!-- <div class="projectHeader">{{dialog.content.fiveotree.header}}</div> -->
+                <md-whiteframe class="md-whiteframe-2dp wideFrame">
+                    {{dialog.content.fiveotree.summary}}
+                    <md-button class="md-button darkHeader googlePlayButton" 
+                        ng-click="delayRedirect(dialog.content.fiveotree.siteLink)">
+                        {{dialog.content.fiveotree.siteLabel}}
+                    </md-button>
+                </md-whiteframe>
+                <md-whiteframe class="md-whiteframe-2dp wideFrame">
+                    <img style="max-width: 100%;" ng-src="{{dialog.content.fiveotree.demoImage}}">
+                </md-whiteframe>
+            </md-content>
+        </md-tab>
+        <md-tab label="{{dialog.content.talus.tabLabel}}">
+            <md-content class="md-padding" layout="column" layout-align="center center">
+                <div class="freelanceLogo">
+                    <img class="stretch" ng-src="{{dialog.content.talus.logo}}" \>
+                </div>
+                <!-- <div class="projectHeader">{{dialog.content.talus.header}}</div> -->
+                <md-whiteframe class="md-whiteframe-2dp wideFrame">
+                    {{dialog.content.talus.summary}}
+                    <md-button class="md-button darkHeader googlePlayButton" 
+                        ng-click="delayRedirect(dialog.content.talus.siteLink)">
+                        {{dialog.content.talus.siteLabel}}
+                    </md-button>
+                </md-whiteframe>
+                <md-whiteframe class="md-whiteframe-2dp wideFrame">
+                    <img style="max-width: 100%;" ng-src="{{dialog.content.talus.demoImage}}">
+                </md-whiteframe>
+            </md-content>
+        </md-tab>
+
+
+
+    </md-tabs>
 </md-content>
