@@ -30,7 +30,7 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     $scope.dialog = defaultDialogConfig;
     $scope.emailObject = {
         name: '',
-        returnEmail: '',
+        subject: '',
         message: '',
     }
     $scope.copyright = contentService.getCopyRightInfo();
@@ -128,7 +128,16 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
         }, 300)
     }
     $scope.sendEmail = function() {
-        console.log('sending email')
+        var nameSignature = '\n\n Message From - ' +  $scope.emailObject.name
+        var emailPath = 'mailto:chris@asakawa.me';
+        emailPath += '?Subject=' + encodeURI($scope.emailObject.subject);
+        emailPath += '&Body=' + encodeURI($scope.emailObject.message);
+        emailPath += encodeURI(nameSignature);
+        $timeout(function() {
+            $mdDialog.cancel();
+            $window.open(emailPath, '_top');
+        }, 300)
+
     }
 
     function showDialog(ev) {
