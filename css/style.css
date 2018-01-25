@@ -154,6 +154,9 @@ md-dialog {
 .schoolFrame {
     margin: 5px !important;
     height: 510px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 .schooolSummary {
     width: 230px;
@@ -173,6 +176,9 @@ md-dialog {
     display: block;
     padding: 5px;
     margin: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 
 .projectHeader {
@@ -188,6 +194,9 @@ md-dialog {
 .projectsTextFrame {
     padding: 20px;
     font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 
 .fishDemo {
@@ -197,13 +206,16 @@ md-dialog {
     max-width: 300px !important;
     margin: 10px;
 }
-.opensourceFishSummary {
-    width: 280px;
-    min-width: 280px;
+.smFrame {
+    width: 300px;
+    min-width: 300px;
     display: block;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 .xsSquareFrame {
     width: 140px;
@@ -211,6 +223,9 @@ md-dialog {
     padding: 5px;
     margin: 5px;
     font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 .fishFrame {
     height: auto;
@@ -219,6 +234,9 @@ md-dialog {
     padding: 5px;
     margin: 5px;
     min-height: 170px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 .fishFrameImage {
     position: absolute;
@@ -257,5 +275,14 @@ md-dialog {
     padding: 10px;
     max-width: 500px;
     font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
 }
 
+.freelanceLogo {
+    width: 300px;
+    margin-left: 50%;
+    left: -150px;
+    position: relative;
+}

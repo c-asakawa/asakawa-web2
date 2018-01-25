@@ -244,7 +244,7 @@ app.service('contentService', function() {
             header: 'Talus Design 3D',
             logo: 'img/talusLogo.png',
             siteLink: 'http://talusdesign3d.com/',
-            siteLabel: 'goto talus\'s Repo',
+            siteLabel: 'goto talus\'s site',
             demoImage: 'img/talusDemo.png',
             summary: 'Designed and developed an informational site for a Portland Oregon 3D printing company.',
 

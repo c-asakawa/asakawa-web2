@@ -1,6 +1,8 @@
-<md-content ng-show="dialog.isProjects">
+<md-content ng-show="dialog.isProjects" layout="column" layout-align="center center">
     <div class="projectHeader">{{dialog.content.skateboardHeader}}</div>
-    <div class="projectsSummary">{{dialog.content.skateboardSummary}}</div>
+    <md-whiteframe class="md-whiteframe-2dp wideFrame">
+        <div class="projectsSummary">{{dialog.content.skateboardSummary}}</div>
+    </md-whiteframe>
     <md-tabs md-dynamic-height="" md-border-bottom="" md-center-tabs="">
         <md-tab label="{{tab.tabLabel}}" ng-repeat="tab in dialog.content.skateboardBuilds">
             <md-content class="md-padding">
