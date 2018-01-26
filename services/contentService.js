@@ -40,12 +40,11 @@ app.service('contentService', function() {
     var bio = {
         title: 'Why I Do What I Do',
         body: 'Something that will always interest me is making things.        \
-               Which why I love what I do, there is nothing more rewarding then developing    \
+               Which is why I love what I do, there is nothing more rewarding then developing    \
                software to solve complex problems. Writing code makes me feel empowered, to   \
                create something useful out of nothing. The potential and innovations          \
-               of software never ceases to amaze me, and I look forward to learning more in   \
-               my future in programming.'
-    
+               of software never ceases to amaze me, and I look forward to learning more \
+               about programming in my future.',
     }
 
     var tiles = [
@@ -134,7 +133,7 @@ app.service('contentService', function() {
         },
         pcc: {
             logo: 'img/pccBanner.png',
-            summary: 'At PCC I was award an associates in liberal arts.',
+            summary: 'At PCC I was awarded an associates in liberal arts.',
             listHeader: 'PCC Course List:',
             classList: [
                 'Physics I, II, & III',
@@ -175,7 +174,7 @@ app.service('contentService', function() {
         lifeAlert: 'This project is currently a work in progress. The purpose of this project is to ' +
                    'be a localized life alert system. This raspberry pi syncs up to a key fob ' +
                    'with multiple buttons. Currently there are two functions: the first is sounding ' +
-                   'off a very loud high pitched buzzer, the second function is set up to send out '  +
+                   'off a very loud, high pitched buzzer. The second function is set up to send out '  +
                    'an emergency text message to hard coded phone numbers.'
     }
     var opensourceContent = {
@@ -189,7 +188,7 @@ app.service('contentService', function() {
             summary: 'This project uses a Raspberry Pi 3 with a camera to create alive stream' +
                      'of my fish tank. This live stream is then used to generate a random number.',
             setupHeader: 'Fish Tank Setup',
-            setupDescribe: 'This raspberry pi camera streams video of the fish. The fish are then tracked by their color to give ' +
+            setupDescribe: 'This Raspberry Pi camera streams video of the fish. The fish are then tracked by their color to give ' +
                            'an x and y position of each fish for each frame of the video.',
             movementHeader: 'Translating Fish Movement',
             movementDescribe: 'Fish movements are tracked by their position on an x/y plane, this change of position is used ' + 
@@ -221,7 +220,7 @@ app.service('contentService', function() {
             repoLabel: 'Goto The Repo',
             demoImage: 'img/rmlsDemo.png',
             summary: 'This application is currently a work in progress. The purpose of this app is to give more functionality than what RMLS\'s ' + 
-                    'website offers. This tool scrapes data from RMLS\'s website; then parses out the data so that it can be filtered ' + 
+                    'website offers. This tool scrapes data from RMLS\'s website; this parses out the data so that it can be filtered ' + 
                      'and searched. Then wraps this data with a nice UI and also plots the data onto Google maps.',
 
         }
