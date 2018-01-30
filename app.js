@@ -1,8 +1,8 @@
 //Define an angular module for our app
-var app = angular.module('asakawaApp', ['ngMaterial', 'duParallax', 'angular-preload-image']);
+var app = angular.module('asakawaApp', ['ngMaterial', 'duParallax', 'angular-preload-image', 'pdf']);
 
 
-app.controller('appController', function($scope, $window, $timeout, $mdDialog, contentService, parallaxHelper) {
+app.controller('appController', function($scope, $window, $timeout, $mdDialog, $mdMedia, contentService, parallaxHelper) {
 
     const defaultDialogConfig = {
         isPhone: false,
@@ -17,6 +17,9 @@ app.controller('appController', function($scope, $window, $timeout, $mdDialog, c
     }
 
     $scope.debug = false;
+
+    $scope.xsMedia = $mdMedia('xs');
+    $scope.smMedia = $mdMedia('sm');
 
     $scope.terminalCommandList = contentService.getTerminalContent();
     $scope.terminalCommandIndex = 0;

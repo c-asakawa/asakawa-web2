@@ -2,7 +2,7 @@
     <div class="md-dialog-container" id="dialog">
         <md-dialog ng-class="dialog.isLarge ? 'largeDialog' : ''">
             <span class="dialogHeader">{{dialog.content.header}}</span>
-            <div class="dialogBody" ng-show="!dialog.isResume">
+            <div class="dialogBody" ng-show="!dialog.isResume" style="overflow:auto">
                 {{dialog.content.body}}
 
                 <!-- dialog phone content -->
@@ -73,12 +73,22 @@
 
             <!-- dialog resume content -->
             <md-container ng-show="dialog.isResume">
-                <embed src="files/resume.pdf" width="100%" height="100%" type="application/pdf" style="position:absolute;">
-                    <p>Your web browser doesn't have a PDF plugin.
-                        Instead you can 
-                        <a href="files/resume.pdf" style="z-index: 3">click here to download the PDF file.</a>
-                    </p>
+                <embed src="files/resume.pdf" 
+                    ng-if="!xsMedia"
+                    width="100%" 
+                    height="100%" 
+                    type="application/pdf" 
+                    style="position:absolute;">
                 </embed>
+                <div ng-if="xsMedia">
+                    <pdf-viewer
+                        delegate-handle="resume"
+                        url="'files/resume.pdf'"
+                        scale="1"
+                        show-toolbar="false">
+                    </pdf-viewer>
+                </div>
+
             </md-container>
         </md-dialog>
     </div>
