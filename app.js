@@ -1,5 +1,5 @@
 //Define an angular module for our app
-var app = angular.module('asakawaApp', ['ngMaterial', 'duParallax']);
+var app = angular.module('asakawaApp', ['ngMaterial', 'duParallax', 'angular-preload-image']);
 
 
 app.controller('appController', function($scope, $window, $timeout, $mdDialog, contentService, parallaxHelper) {

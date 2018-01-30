@@ -75,7 +75,7 @@ app.service('contentService', function() {
         linkedin: {
             label: 'LinkedIn',
             iconClass: 'fa fa-linkedin',
-            url: 'https://www.linkedin.com/in/asakawa-11007937/'
+            url: 'https://www.linkedin.com/in/chris-asakawa'
         },
         github: {
             label: 'GitHub',

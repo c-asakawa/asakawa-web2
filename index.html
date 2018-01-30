@@ -33,7 +33,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <img src="img/galaxy.png" class="bgImage" alt="" du-parallax y="background"/>
+        <img preload-image ng-src="img/galaxy.png" class="bgImage" alt="" du-parallax y="background"/>
         <div ng-include="'templates/terminal.html'"></div>
 
         <div class="contentContainer">
@@ -73,6 +73,7 @@
         <script type="application/javascript" src="bower_components/angular-scroll/angular-scroll.min.js"></script>
         <script type="application/javascript" src="bower_components/please-wait/build/please-wait.min.js"></script>
         <script type="application/javascript" src="js/angular-parallax.min.js"></script>
+        <script type="application/javascript" src="js/preload-image.js"></script>
 
         <!-- My JS Resources -->
         <!-- <script type="application/javascript" src="js/typer.js"></script> -->

@@ -9,7 +9,7 @@
             <div class="projectHeader" flex="100">{{tab.title}}</div>
             <div layout="row" layout-align="center center" layout-xs="column">
                 <md-whiteframe class="md-whiteframe-2dp projectsImageFrame" ng-repeat="image in tab.imageList">
-                    <img class="stretch" ng-src="{{image}}"/>
+                    <img preload-image class="stretch" ng-src="{{image}}"/>
                 </md-whiteframe>
             </div>
             </md-content>
@@ -19,7 +19,7 @@
     <div class="projectHeader" flex="100" style="margin-top:40px;">{{dialog.content.lifeAlertHeader}}</div>
     <div layout="row" layout-align="center center" layout-xs="column">
         <md-whiteframe class="md-whiteframe-2dp projectsImageFrame">
-            <img class="stretch" ng-src="img/localLifeAlert.png"/>
+            <img preload-image class="stretch" ng-src="img/localLifeAlert.png"/>
         </md-whiteframe>
         <md-whiteframe class="md-whiteframe-2dp projectsImageFrame projectsTextFrame">
             {{dialog.content.lifeAlert}}
